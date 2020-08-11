@@ -1,0 +1,10 @@
+var movie = 'Just Mercy';
+var noOfActors = 10;
+var comedy = false;
+var crewMembers = ['Camera man', 'Editor', 'Make up'];
+var shootingDays = [1, 4, 8, 9, 12];
+console.log(movie);
+console.log(noOfActors);
+console.log(comedy);
+console.log(crewMembers);
+console.log(shootingDays);
