@@ -1,0 +1,27 @@
+<p style="color: chocolate;">Submit your Expenses</p>
+<div>
+
+    <form>
+        <div>
+            <label>Expense Type</label>
+            <select #expenseType title="test"><option>Broad Band</option> 
+                <option>Transport</option>
+                <option>Food</option></select> Tem Var {{expenseType}}
+        </div>
+        <div>
+            <label>Amount</label>
+            <input type="text" #amount/>
+        </div>
+        <div>
+            <label>Date</label>
+            <input type="date" #expenseDate/> </div>
+        <div>
+            <label>Comments</label><textarea rows="3" cols="30" #comments></textarea>
+        </div>
+        <div>
+            <button type="button" (click)="onExpense(expenseType.value,amount.value,expenseDate.value,comments.value)">Submit Expense</button>
+            <button type="button" (click)="onExpenseRef(expenseType)">Submit Expense 1</button>
+        </div>
+    </form>
+
+</div>
