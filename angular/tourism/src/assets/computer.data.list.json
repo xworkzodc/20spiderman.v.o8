@@ -1,0 +1,18 @@
+[{
+        "touch": false,
+        "noofkeys": 101,
+        "os": "linux"
+    },
+    {
+        "touch": false,
+        "noofKeys": 128,
+        "os": "windows",
+        "graphicsCard": "Raedaon"
+    },
+    {
+        "touch": false,
+        "noofKeys": 128,
+        "os": "windows",
+        "graphicsCard": "Raedaon"
+    }
+]

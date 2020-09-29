@@ -1,0 +1,29 @@
+<p>lpg works!</p>
+
+
+<div>
+    <div>
+        Consumer No. <input type="number" [formControl]="consumerNo" /> {{consumerNo.status}}
+    </div>
+    <div>
+        First Name : <input type="text" [formControl]="fname" minlength="6" /> {{fname.status}}
+    </div>
+    <div>
+        Last Name : <input type="text" [formControl]="lname" minlength="4" required/> {{lname.status}}
+        <span *ngIf="lname.touched && (lname.invalid)" style="color: red;">
+            <span *ngIf="lname.errors.required">Last name is required</span>
+        <span *ngIf="lname.errors.minlength">Last name should be min 4 chars</span>
+        </span>{{lname.value}}
+        <br> States of Last Name
+        <br> Touched {{lname.touched}}
+        <br> Un Touched {{lname.untouched}}
+        <br> pristine{{lname.pristine}}
+        <br> dirty {{lname.dirty}}
+        <br>valid{{lname.valid}}
+        <br>in-valid{{lname.invalid}}
+
+    </div>
+
+    <button (click)=" generateConsumerNo()" [disabled]="isValid">Generate</button>
+
+</div>

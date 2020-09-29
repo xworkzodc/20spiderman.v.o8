@@ -1,0 +1,4 @@
+<p> {{voterName}}
+    <!--Make places dynamic-->
+    <button class="btn btn-success" value='Kodachadri' [disabled]="disableButton" (click)="onPress($event.target.value)">Kodachadri</button>
+    <button class="btn btn-success" value='Puri' #butRef [disabled]="disableButton" (click)="onPress(butRef.value)">Puri</button> </p>

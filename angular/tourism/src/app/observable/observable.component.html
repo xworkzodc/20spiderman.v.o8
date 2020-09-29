@@ -1,0 +1,16 @@
+<p>observable works!</p>
+<div><button (click)="onStreamData()" class="btn btn-primary">Stream Data</button></div>
+<br>
+<div><button (click)="onSub1()" class="btn btn-primary">Subscriber 1</button>
+
+    <p>
+        Name : {{displayName}}
+    </p>
+    <p>
+
+        Observable : {{packetOfData | async}}
+    </p>
+
+</div>
+
+<br>

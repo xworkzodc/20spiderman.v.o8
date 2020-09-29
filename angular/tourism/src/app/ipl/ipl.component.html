@@ -1,0 +1,35 @@
+<p>ipl works!</p>
+
+
+IPL Team size : {{teamNames.length}}
+
+<ul>
+    <li *ngFor="let team of teamNames">{{team}}</li>
+</ul>
+
+<div>
+    <button (click)="showPolitician()">Show Politician Name</button> {{politicianNames | async}}
+
+    <ul>
+        <li *ngFor="let pn of politicianNames | async">{{pn}}</li>
+    </ul>
+</div>
+
+
+<div>
+
+    <button (click)="showComputer()">Show Computer Data</button> OS Owner : {{osowner}}
+    <br>Computer {{computer | json}}
+    <br> Touch : {{computer.touch}}
+    <br>No Of Keys : {{computer.noofKeys}}
+
+</div>
+
+<div>
+    <button (click)="showComputerList()">Show Computer Data List</button>
+    <p *ngFor="let element of computerList">
+        Touch:{{element.touch}} , No Of Keys:{{element.touch}}, Graphics Card:{{element.graphicsCard}}
+
+    </p>
+
+</div>
