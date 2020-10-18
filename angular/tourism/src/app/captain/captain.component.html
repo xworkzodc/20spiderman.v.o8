@@ -1,0 +1,24 @@
+<p>captain works!</p>
+<form [formGroup]="captainForm" (ngSubmit)="onSubmit($event)">
+    <div>
+        <div>
+            <label>Name</label>
+            <input type="text" formControlName="name" minlength="5" />
+        </div>
+        <div>
+            <label>Origin City</label>
+            <input type="text" formControlName="originCity" minlength="3" />
+        </div>
+        <div>
+            <label>Team Name</label>
+            <input type="text" formControlName="teamName" />
+        </div>
+        <div>
+            <button class="btn btn-success" type="submit">  Save</button>
+        </div>
+    </div>
+    TODO REMOVE FORM Touched{{captainForm.touched}}
+
+    <br>TODO REMOVE FORM STATUS {{captainForm.status}}
+    <br>DEBUG {{debug()}}
+</form>

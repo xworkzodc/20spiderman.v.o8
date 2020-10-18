@@ -12,7 +12,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { PoliticanService } from './ipl/politician.service';
 import { NullPipe } from './ipl/null.pipe';
 import { LpgComponent } from './lpg/lpg.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CaptainComponent } from './captain/captain.component';
+import { PassportComponent } from './passport/passport.component';
+import { BikebookComponent } from './bikebook/bikebook.component';
+import { TreeComponent } from './tree/tree.component';
+import { ProductComponent } from './product/product.component';
+import { ProductService } from './product/product.service';
 @NgModule({
     declarations: [
         AppComponent,
@@ -21,14 +27,20 @@ import { ReactiveFormsModule } from '@angular/forms';
         ObservableComponent,
         IplComponent,
         NullPipe,
-        LpgComponent
+        LpgComponent,
+        CaptainComponent,
+        PassportComponent,
+        BikebookComponent,
+        TreeComponent,
+        ProductComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         HttpClientModule, ReactiveFormsModule
+        , FormsModule
     ],
-    providers: [IPLService, PoliticanService],
+    providers: [IPLService, PoliticanService, ProductService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

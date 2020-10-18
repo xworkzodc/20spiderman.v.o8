@@ -13,6 +13,7 @@ export class IplComponent implements OnInit {
 
     teamNames = [];
     politicianNames: Observable<string[]>;
+    zomato: Observable<any>;
     computer: ComputerData = new ComputerData('', 0, '', '');
     osowner = '';
     computerList: ComputerData[] = [];
@@ -41,6 +42,12 @@ export class IplComponent implements OnInit {
     }
 
     showPolitician() {
+
+        //this.zomato = this.iplService.zomatoRestaurants(place);
+    }
+
+
+    showZomato() {
 
         this.politicianNames = this.politicanService.politicianName;
     }

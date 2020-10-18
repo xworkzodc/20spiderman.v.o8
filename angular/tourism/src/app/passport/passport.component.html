@@ -1,0 +1,33 @@
+<p>passport works!</p>
+
+<div>
+    <form #countryForm="ngForm" (ngSubmit)="onSubmit($event,countryForm)">
+        <div>
+            <label>Country</label>
+            <input type="text" [(ngModel)]="country" #count="ngModel" name="cty" required /> {{country}}
+            <br>NgModel STAUS: {{count.status}}
+            <br>NgModel VALID: {{count.valid}}
+            <br>NgModel IN-VALID: {{count.invalid}}
+            <br>NgModel TOUCHED: {{count.touched}}
+            <br>NgModel PRISTINE: {{count.pristine}}
+            <br>NgModel DIRTY: {{count.dirty}}
+            <br>NgModel UN-TOUCHED: {{count.untouched}}
+
+        </div>
+
+        <div>
+            <label>Prime Minister</label>
+            <input type="text" [(ngModel)]="primeMinister" name="pm" required #prime="ngModel" /> {{primeMinister}}
+            <br>NgModel STAUS: {{prime.status}}
+        </div>
+        <div>
+            <label>Capital City</label>
+            <input type="text" [(ngModel)]="city" name="city" required #cty="ngModel" /> {{city}}
+            <br>NgModel STAUS: {{cty.status}}
+        </div>
+        <div>
+            <button (click)="check(countryForm)" [disabled]="!countryForm.valid" type="submit">Check Ng
+                Model</button>FORM STATUS {{countryForm.valid}}
+        </div>
+    </form>
+</div>

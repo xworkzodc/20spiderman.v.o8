@@ -1,0 +1,32 @@
+<p>product works!</p>
+<div>
+    <form (ngSubmit)="onSave()">
+        <div>
+            <label></label>
+            <select [(ngModel)]="productModel.name" name="name">
+                <option>Mobile</option>
+                <option>Shampoo</option>
+            </select>
+        </div>
+        <div>
+            <label></label>
+            <select [(ngModel)]="productModel.type" name="type" disabled>
+                <option>Personal Care</option>
+                <option>Electronic Device</option>
+            </select>
+        </div>
+        <div>
+            <label></label>
+            <input type="text" [(ngModel)]="productModel.price" name="price" />
+        </div>
+        <div>
+            <label></label>
+            <input type="text" [(ngModel)]="productModel.quantity" name="quantity" />
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Save Product</button>
+        </div>
+        TODO REMOVE {{productModel | json}}
+        <br>TOTAL: {{productModel.price*productModel.quantity}}
+    </form>
+</div>

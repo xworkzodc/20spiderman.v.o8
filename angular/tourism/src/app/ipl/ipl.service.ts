@@ -1,5 +1,5 @@
 import { Observable, observable, from } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ComputerData } from './computer.data';
 
@@ -56,10 +56,12 @@ export class IPLService {
 
     get computerDataList(): Observable<ComputerData[]> {
 
-        let url = '/assets/computer.data.list.json';
+        let url = 'http://localhost:8090/v2/fetchAllData';
         let observable = this.http.get<ComputerData[]>(url);
         return observable;
     }
+
+
 
 
 }

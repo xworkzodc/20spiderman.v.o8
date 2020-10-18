@@ -1,0 +1,23 @@
+<p>tree works!</p>
+<div>
+    <button (click)="showTree()">Show Tree</button>
+    <p *ngFor="let t of treeList">{{t.name}}
+        <br>{{t.givesFruits}}
+        <br>{{t.age}}
+        <br> ====================
+    </p>
+</div>
+<div>
+    <button (click)="showPlanets()">Show Planets</button>
+    <br>Name:
+    <br>Position:
+    <br>KMS Far from Sun:
+    <br>Liveable:
+</div>
+<div>
+    <button (click)="showCustomer()">Show Customer</button>
+    <br>Name:
+    <br>Location:
+    <br>Registered:
+    <br>Rating:
+</div>
